@@ -1,6 +1,6 @@
 import create from "zustand";
 import axios from "axios";
-import { getAnime } from "../utilities/searchAnime";
+
 
 interface AnimeState {
 	Anime: string;

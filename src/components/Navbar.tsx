@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAnimeStore } from "../store/animeStore";
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Icons import
 import { BiSearchAlt } from "react-icons/bi";
@@ -13,7 +13,7 @@ export const Navbar = () => {
 		setAnime(event.target.value);
 	};
 
-	const handleSubmit = (e: any) => {
+	const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
 		e.preventDefault();
 		searchAnime(Anime);
 	};
